@@ -1,0 +1,11 @@
+/.github/
+/.gitignore
+/.editorconfig
+/.vscode/
+/.idea/
+/coverage/
+/node_modules/
+/.editorconfig
+/.eslintrc.js
+/vitest.config.js
+/tsconfig.js

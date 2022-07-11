@@ -1,0 +1,39 @@
+{
+  "name": "katadojo",
+  "version": "0.0.1-alpha.1",
+  "description": "Kata generator",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint './**/*.{ts,js}' --fix",
+    "eslint:ci": "eslint './**/*.{ts,js}'",
+    "test": "vitest",
+    "test:ci": "vitest run --coverage",
+    "test:coverage": "vitest --coverage",
+    "clean": "rimraf dist",
+    "build": "npm run clean & tsc"
+  },
+  "author": "Anthony REY",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
+    "c8": "^7.11.3",
+    "eslint": "^8.19.0",
+    "eslint-import-resolver-typescript": "^3.2.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "vitest": "^0.17.1"
+  },
+  "dependencies": {
+    "commander": "^9.3.0",
+    "fs-extra": "^10.1.0",
+    "simple-git": "^3.10.0",
+    "typescript": "^4.7.4"
+  },
+  "bin": {
+    "katadojo": "./dist/bin/katadojo.js"
+  }
+}
