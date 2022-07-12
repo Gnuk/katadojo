@@ -1,30 +1,33 @@
-# Template TypeScript Kata with Vitest
+# Kata Dojo
 
-This is a basic template to make a kata using [TypeScript](https://www.typescriptlang.org/) and [Vitest](https://vitest.dev/).
+This is a basic command to generate dojo from template.
 
 ## Prerequisites
 
 * [Node](https://nodejs.org/) LTS
 
-## Tests
+## Install
 
-Create a test file in the `src` directory (example: `FizzBuzz.spec.ts`) add a test and run:
+```shell
+npm i -g katadojo
+```
 
+## Development
 
-To watch tests:
+Run tests with:
 
 ```shell
 npm test
 ```
 
-To watch tests with coverage:
+Build with:
 
 ```shell
-npm run test:coverage
+npm run build
 ```
 
-To run tests in continuous integration:
+Install locally with:
 
 ```shell
-npm run test:ci
+npm install --global
 ```
