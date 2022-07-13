@@ -3,23 +3,24 @@ import * as path from 'path';
 import * as fse from 'fs-extra';
 import { afterAll, beforeEach, describe, it } from 'vitest';
 
-import { Generator, Kind } from './Generator';
+import { Generator } from './Generator';
+import { Kata, Slug } from './Kata';
 import { Name } from './Name';
 import { expectToBeADir, expectToBeAFile } from './Path.fixture';
 
 const GENERATED = path.resolve(__dirname, 'generated-generator');
 
 const generatedPath =
-  (name: Kind) =>
+  (name: string) =>
   (...paths: string[]): string =>
     path.resolve(GENERATED, `${name}-example`, ...paths);
 
-const generation = (kind: Kind): Generator => Generator.of({ kind, name: Name.of(`${kind}-example`), pathname: GENERATED });
+const generation = (slug: Slug): Generator => Generator.of({ kata: Kata.for(slug), name: Name.of(`${slug}-example`), pathname: GENERATED });
 
-const expectGeneration = async (kind: Kind, ...files: string[]): Promise<void> => {
-  await generation(kind).generate();
+const expectGeneration = async (slug: Slug, ...files: string[]): Promise<void> => {
+  await generation(slug).generate();
 
-  const generationPath = generatedPath(kind);
+  const generationPath = generatedPath(slug);
   expectToBeADir(generationPath());
   files.map((pathname) => generationPath(pathname)).forEach(expectToBeAFile);
 };

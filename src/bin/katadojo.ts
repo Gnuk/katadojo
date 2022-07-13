@@ -1,5 +1,10 @@
 #!/usr/bin/env node
 
-import { program } from '../Command';
+import { command } from '../Command';
 
-program.parse();
+command(console.log)
+  .parseAsync(process.argv)
+  .catch((e: Error) => {
+    console.error(e.message);
+    process.exit(1);
+  });
