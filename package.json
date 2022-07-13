@@ -4,8 +4,8 @@
   "description": "Kata generator",
   "main": "index.js",
   "scripts": {
-    "eslint": "eslint './**/*.{ts,js}' --fix",
-    "eslint:ci": "eslint './**/*.{ts,js}'",
+    "eslint": "eslint \"./**/*.{ts,js}\" --fix",
+    "eslint:ci": "eslint \"./**/*.{ts,js}\"",
     "test": "vitest",
     "test:ci": "vitest run --coverage",
     "test:coverage": "vitest --coverage",
