@@ -12,6 +12,14 @@ This is a basic command to generate dojo from template.
 npm i -g katadojo
 ```
 
+## Usage
+
+To know how to use, please launch:
+
+```shell
+katadojo help
+```
+
 ## Development
 
 Run tests with:
