@@ -1,8 +1,10 @@
 {
   "name": "katadojo",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Kata generator",
   "main": "index.js",
+  "repository": "github:Gnuk/katadojo",
+  "homepage": "https://github.com/Gnuk/katadojo#readme",
   "scripts": {
     "eslint": "eslint \"./**/*.{ts,js}\" --fix",
     "eslint:ci": "eslint \"./**/*.{ts,js}\"",
