@@ -9,6 +9,7 @@ describe('Kata', () => {
     ['ts-vitest', 'ts-vitest', 'https://github.com/Gnuk/template-ts-vite-kata'],
     ['py', 'py', 'https://github.com/Gnuk/template-python-kata'],
     ['php', 'php', 'https://github.com/Gnuk/template-php-kata'],
+    ['java', 'java', 'https://github.com/cvirieux/template-java-kata'],
   ])('Should get %s kind for %s slug', (kind, slug, repository) => {
     const kata = Kata.for(slug);
 

@@ -1,4 +1,4 @@
-const KINDS = ['ts-jest', 'ts-vitest', 'py', 'php'] as const;
+const KINDS = ['ts-jest', 'ts-vitest', 'py', 'php', 'java'] as const;
 const SLUGS = [...KINDS, 'ts', 'ts-vite', 'typescript', 'python'] as const;
 
 export type Kind = typeof KINDS[number];
@@ -17,6 +17,7 @@ const KIND_TO_REPOSITORY: Record<Kind, string> = {
   ['ts-vitest']: 'https://github.com/Gnuk/template-ts-vite-kata',
   ['py']: 'https://github.com/Gnuk/template-python-kata',
   ['php']: 'https://github.com/Gnuk/template-php-kata',
+  ['java']: 'https://github.com/cvirieux/template-java-kata',
 };
 
 const kindHasNot = (slug: string): boolean => KINDS.findIndex((kind) => kind === slug) === -1;
