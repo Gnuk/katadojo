@@ -12,7 +12,7 @@ export const command = (show: (...messages: string[]) => unknown): Command => {
     .description('generate a kata template')
     .argument('<slug>', 'kata slug')
     .argument('<name>', 'name as ASCII kebab-case')
-    .argument('<destination>', 'destination directory')
+    .argument('[destination]', 'destination directory', './')
     .action(
       async (kata: string, name: string, destination: string) =>
         await Generator.of({ kata: Kata.from(kata), name: Name.of(name), pathname: destination }).generate()

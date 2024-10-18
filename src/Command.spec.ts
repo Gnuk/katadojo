@@ -25,6 +25,16 @@ describe('Command', () => {
     expectToBeAFile(path.resolve(GENERATED, 'example/package.json'));
   });
 
+  it('Should generates a template using default path', async () => {
+    fse.removeSync('./example');
+
+    await command(spyConsole()).parseAsync(['', '', 'generate', 'ts', 'example']);
+
+    expectToBeAFile(path.resolve('./', 'example/package.json'));
+
+    fse.removeSync('./example');
+  });
+
   it('Should list kata slugs', () => {
     const fakeConsole: string[] = [];
     command(spyConsole(fakeConsole)).parse(['', '', 'slugs']);

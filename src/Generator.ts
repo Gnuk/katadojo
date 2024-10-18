@@ -6,8 +6,6 @@ import { simpleGit } from 'simple-git';
 import { Kata } from './Kata';
 import { Name } from './Name';
 
-export const isEmpty = (name: string): boolean => name.trim().length === 0;
-
 export interface GeneratorContent {
   kata: Kata;
   name: Name;
