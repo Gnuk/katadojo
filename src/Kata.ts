@@ -1,8 +1,8 @@
 const KINDS = ['ts-jest', 'ts-vitest', 'py', 'php', 'java'] as const;
 const SLUGS = [...KINDS, 'ts', 'ts-vite', 'typescript', 'python'] as const;
 
-export type Kind = typeof KINDS[number];
-export type Slug = typeof SLUGS[number];
+export type Kind = (typeof KINDS)[number];
+export type Slug = (typeof SLUGS)[number];
 type CustomSlug = Exclude<Slug, Kind>;
 
 const CUSTOM_SLUG_TO_KIND: Record<CustomSlug, Kind> = {
